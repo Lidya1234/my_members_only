@@ -1,6 +1,6 @@
 <%= form_for @post do |f| %>
-   
-    Post: <%= f.text_area :posts %>
+   <%= current_user %>
+    Post: <%= f.text_area :body %>
  
     <%= f.submit "Submit" %>
 <% end %> 
