@@ -1,5 +1,5 @@
 <%= form_for @post do |f| %>
-   <%= current_user %>
+   <%= @post.try(:user).try(:username) %>
     Post: <%= f.text_area :body %>
  
     <%= f.submit "Submit" %>

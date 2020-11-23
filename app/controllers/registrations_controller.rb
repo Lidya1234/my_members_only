@@ -1,8 +1,9 @@
-class RegistrationsController < Devise::RegistrationsController
+# frozen_string_literal: true
 
-    private
-  
-      def sign_up_params
-        params.require(:user).permit(:email, :password, :name)
-      end
+class RegistrationsController < Devise::RegistrationsController
+  private
+
+  def sign_up_params
+    params.require(:user).permit(:email, :password, :name)
   end
+end
