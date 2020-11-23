@@ -15,6 +15,7 @@
                  <%= link_to 'Sign out', destroy_user_session_path, method: :delete if user_signed_in? %>
    
     <%= link_to 'sign in', new_user_session_path, method: :get %>
+    <%= link_to 'Create post', new_post_path, method: :get if user_signed_in? %>
     <br>
     <%= yield %>
   </body>
