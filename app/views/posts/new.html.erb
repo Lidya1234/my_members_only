@@ -1,0 +1,6 @@
+<%= form_for @post do |f| %>
+   <%= @post.try(:user).try(:email) %>
+    Post: <%= f.text_area :body %>
+ 
+    <%= f.submit "Submit" %>
+<% end %> 

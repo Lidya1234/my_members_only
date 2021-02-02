@@ -1,0 +1,13 @@
+<% @post.each do |p|%>
+ <br>
+<div>
+    <%= p.body %>
+    <% if user_signed_in? %>
+    <strong>
+    <%= p.user.email %>
+    </strong>
+    <% end %>
+   
+</div>
+ <br>
+<% end %>
